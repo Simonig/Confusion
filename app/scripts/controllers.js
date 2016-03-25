@@ -2,11 +2,11 @@
 
 angular.module('confusionApp')
 
-        .controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory) {
+        .controller('MenuController', ['$scope', 'menuFactory', function($scope, menuFactory,$rootScope) {
             
             $scope.tab = 1;
             $scope.filtText = '';
-            $scope.showDetails = true;
+            $scope.showDetails = false;
             $scope.showMenu = false;
             $scope.message = "Loading ...";
             menuFactory.getDishes().query(
@@ -146,6 +146,4 @@ angular.module('confusionApp')
         // implement the IndexController and About Controller here
 
                                             
-        }])
-
-;
+        }]);
